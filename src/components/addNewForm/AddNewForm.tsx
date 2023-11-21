@@ -25,7 +25,7 @@ function AddNewForm({ toggleOpen }: Props) {
     { label: "Name", name: "name", type: "text" as const },
     { label: "Brand", name: "brand", type: "text" as const },
     { label: "Price", name: "price", type: "number" as const },
-    { label: "Size Us", name: "size", type: "number" as const },
+    { label: "Size US", name: "size", type: "number" as const },
     { label: "Year", name: "year", type: "number" as const },
   ];
 

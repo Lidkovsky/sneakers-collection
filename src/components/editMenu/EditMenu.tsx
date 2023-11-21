@@ -3,6 +3,7 @@ import isEqual from "lodash/isEqual";
 import TextField from "../../ui/textField/TextField";
 import "./styles.scss";
 import Button from "../../ui/button/Button";
+import deleteIcon from "../../images/trash-icon.svg";
 import {
   SneakerAPIInterfase,
   BASE_URL,
@@ -115,6 +116,7 @@ function EditMenu({ shoe, toggleOpen }: Props) {
           <Button
             text="Delete"
             state="active"
+            iconUrl={deleteIcon}
             onClick={(e) => handleSubmit("DELETE", e)}
           />
         </div>
