@@ -1,11 +1,6 @@
 @import "../../styles/global";
 
 .searchResultFor {
-  margin-top: 24px;
-  margin-bottom: 16px;
-  @include lg {
-    margin: 0;
-  }
   .searchResLabel {
     color: $black;
     font-family: Excon;

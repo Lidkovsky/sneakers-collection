@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from "react";
 import "./styles.scss";
 import TextInput from "../../ui/textInput/TextInput";
+
 interface Props {
   label: string;
   placeholder?: string;

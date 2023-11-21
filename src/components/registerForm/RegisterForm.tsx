@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import { FormEvent, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import TextField from "../textField/TextField";
@@ -16,9 +16,6 @@ function RegisterForm({ isRegister = false }: Props) {
 
   const navigate = useNavigate();
 
-  //   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-  //     setEmail(e.target.value);
-  //   };
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     navigate("/main");

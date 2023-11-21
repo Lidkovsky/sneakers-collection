@@ -8,12 +8,12 @@ import {
   SneakerAPIInterfase,
   BASE_URL,
   SneakerInterfase,
-} from "../../components/sneakersList/SneakersList";
+} from "../../pages/main/Main";
 import RatingStars from "../../ui/ratingStars/RatingStars";
 
 interface Props {
   shoe: SneakerAPIInterfase;
-  toggleOpen: any;
+  toggleOpen: () => void;
 }
 
 function EditMenu({ shoe, toggleOpen }: Props) {

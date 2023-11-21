@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import { ReactElement, useEffect } from "react";
 import closeIcon from "../../images/close-icon.svg";
 import "./styles.scss";
 interface Props {
-  toggleOpen: any;
+  toggleOpen: () => void;
   isOpen: boolean;
-  children: any;
+  children?: ReactElement<any, any>;
 }
 
 function SideMenu({ toggleOpen, isOpen, children }: Props) {

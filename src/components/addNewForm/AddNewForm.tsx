@@ -1,20 +1,10 @@
-import React, { ChangeEvent, RefObject, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import TextField from "../textField/TextField";
 import "./styles.scss";
 import Button from "../../ui/button/Button";
 import plusIcon from "../../images/plus-icon.svg";
-import closeIcon from "../../images/close-icon.svg";
-import emptyStar from "../../images/star-empty.svg";
-import filledStar from "../../images/star-filled.svg";
-import {
-  SneakerInterfase,
-  BASE_URL,
-} from "../../components/sneakersList/SneakersList";
+import { SneakerInterfase, BASE_URL } from "../../pages/main/Main";
 import RatingStars from "../../ui/ratingStars/RatingStars";
-
-// export function UseNewForm(ref){
-//   ref.
-// }
 
 interface Props {
   toggleOpen: () => void;
