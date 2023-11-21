@@ -4,7 +4,8 @@ import Button from "../../ui/button/Button";
 import calendarIcon from "../../images/calendar-icon.svg";
 import dollarIcon from "../../images/dollar-icon.svg";
 import sizeIcon from "../../images/size-icon.svg";
-
+import chevronDown from "../../images/chevron-icon.svg";
+import chevronUp from "../../images/chevron-up.svg";
 interface Props {
   setFilter: React.Dispatch<React.SetStateAction<string | undefined>>;
   filter: string | undefined;
@@ -39,12 +40,14 @@ function SortBar({ setFilter, filter = undefined }: Props) {
     <>
       <div className="sortBarMob">
         <Button
-          className="dropdownButton"
+          className={"dropdownButton" + (isOpen ? " open " : "")}
           type="secondary"
           text={
             "Sort by: " +
             (selectedOption ? selectedOption.title : "Select an option")
           }
+          icon="right"
+          iconUrl={chevronDown}
           onClick={() => setIsOpen(!isOpen)}
         />
 
