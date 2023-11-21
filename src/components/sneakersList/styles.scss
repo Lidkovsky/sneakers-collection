@@ -1,5 +1,6 @@
 @import "../../styles/global";
 .itemsWrapper {
+  margin-top: 24px;
   width: 100%;
   row-gap: 8px;
   padding-bottom: 150px;
@@ -11,8 +12,7 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: start;
-    margin-top: 16px;
-    margin-bottom: 8px;
+
     @include lg {
       flex-direction: row;
       align-items: center;
@@ -26,30 +26,18 @@
   .shoeCard {
     grid-column: span 4;
   }
-}
-
-.emptyWrapper {
-  height: 100%;
-  row-gap: 48px;
-  margin-top: 64px;
-  padding-bottom: 150px;
-
-  p {
-    grid-column: 1 / -1;
-    text-align: center;
-    @include lg {
-      grid-column: 5 / 9;
-    }
-  }
-  .emptyListImg {
-    grid-column: 1 / -1;
+  .bottomButtonBg {
+    position: fixed;
+    bottom: 0px;
+    height: 120px;
+    background-color: $white;
+    left: 0px;
+    right: 0px;
     width: 100%;
-    height: auto;
-    max-height: 300px;
+    border-top: 1px solid $gray80;
 
     @include lg {
-      max-height: 500px;
-      grid-column: 3 / 11;
+      display: none;
     }
   }
 }
