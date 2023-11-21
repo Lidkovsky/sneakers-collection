@@ -1,0 +1,73 @@
+@import "../../styles/global";
+
+.headerWrapper {
+  align-items: center;
+  margin-top: 56px;
+
+  h1 {
+    grid-column: 1 / -1;
+
+    @include lg {
+      grid-column: 1 / 7;
+    }
+    @media (min-width: 1170px) {
+      grid-column: 1 / 8;
+    }
+  }
+  .searchWrapper {
+    grid-column: 1 / -1;
+    width: 100%;
+
+    .searchBar {
+      margin-top: 16px;
+      flex-grow: 1;
+      height: 48px;
+      width: 100%;
+      @include lg {
+        width: fit-content;
+        margin-top: 0;
+      }
+    }
+
+    .addNewButton {
+      display: none;
+    }
+
+    @include lg {
+      display: flex;
+      height: fit-content;
+      align-items: center;
+      gap: 16px;
+      grid-column: 7 / -1;
+
+      .addNewButton {
+        display: flex;
+        white-space: nowrap;
+      }
+    }
+    @media (min-width: 1170px) {
+      grid-column: 8 / -1;
+    }
+  }
+}
+
+.mainWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .addNewButtonBottom {
+    position: fixed;
+    bottom: 56px;
+    left: 22px;
+    right: 22px;
+    margin: 0 auto;
+    width: calc(100% - 44px);
+    max-width: 500px;
+    display: flex;
+
+    @include lg {
+      display: none;
+    }
+  }
+}

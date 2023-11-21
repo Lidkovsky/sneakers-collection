@@ -1,0 +1,20 @@
+@import "../../styles/global";
+
+.searchResultFor {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  @include lg {
+    margin: 0;
+  }
+  .searchResLabel {
+    color: $black;
+    font-family: Excon;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    @include lg {
+      font-weight: 400;
+    }
+  }
+}

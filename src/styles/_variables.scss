@@ -1,0 +1,17 @@
+$red: #ef233c;
+$black: #191919;
+$bg: #eeeff0;
+$gray80: #cccccc;
+$gray50: #808080;
+$white: #ffffff;
+$focus: #20a9f3;
+$hover: #373737;
+
+$hoverFilter: invert(19%) sepia(0%) saturate(0%) hue-rotate(39deg)
+  brightness(94%) contrast(88%);
+$blackFilter: invert(0%) sepia(100%) saturate(0%) hue-rotate(108deg)
+  brightness(100%) contrast(103%);
+$whiteFilter: invert(100%) sepia(0%) saturate(18%) hue-rotate(16deg)
+  brightness(106%) contrast(106%);
+$gray50Filter: invert(60%) sepia(0%) saturate(298%) hue-rotate(138deg)
+  brightness(83%) contrast(77%);

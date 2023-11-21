@@ -1,0 +1,78 @@
+@import "../../styles/global";
+
+.createWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 92px;
+  padding-top: 56px;
+  min-height: 100vh;
+  @include lg {
+    padding: 20px 0;
+  }
+  .createContent {
+    img {
+      grid-column: 2 / 4;
+      height: 180px;
+      width: auto;
+      align-self: center;
+      justify-self: center;
+      margin-bottom: 32px;
+
+      @include lg {
+        grid-column: 1 / 7;
+        width: 100%;
+        height: auto;
+        margin: 0;
+      }
+    }
+
+    .createRight {
+      grid-column: 1 / -1;
+
+      align-content: center;
+      h1 {
+        grid-column: 1 / -1;
+        text-align: center;
+
+        @include lg {
+          text-align: start;
+        }
+      }
+      .registerTitle {
+        margin-bottom: 48px;
+
+        @include lg {
+          margin-bottom: 56px;
+        }
+      }
+      .loginText {
+        margin-top: 16px;
+        margin-bottom: 48px;
+        grid-column: 1 / -1;
+        text-align: center;
+
+        @include lg {
+          text-align: start;
+          margin-top: 24px;
+          margin-bottom: 56px;
+        }
+      }
+      form {
+        grid-column: 1 / 5;
+      }
+      > button {
+        grid-column: 1 / 5;
+        width: 100%;
+        margin-top: 16px;
+      }
+
+      @include lg {
+        grid-column: 8 / -1;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 20px;
+      }
+    }
+  }
+}

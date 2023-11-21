@@ -1,0 +1,94 @@
+@import "../../styles/global";
+@import "../../styles/variables";
+
+.button {
+  height: fit-content;
+  width: fit-content;
+  border-radius: 12px;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  transition: 0.2s color ease-in-out;
+  transition: 0.2s background-color ease-in-out;
+  justify-content: center;
+
+  &.left {
+    flex-direction: row;
+  }
+  &.right {
+    flex-direction: row-reverse;
+  }
+
+  &.large {
+    padding: 12px 32px;
+    img {
+      height: 24px;
+      width: auto;
+    }
+  }
+  &.small {
+    padding: 6px 12px;
+    img {
+      height: 16px;
+      width: auto;
+    }
+  }
+
+  &:not(:disabled) {
+    &:not(.active) {
+      &.primary {
+        background-color: $black;
+        color: $white;
+
+        img {
+          filter: $whiteFilter;
+        }
+        &:hover {
+          background-color: $hover;
+        }
+      }
+
+      &.secondary {
+        border: 1px solid $black;
+
+        img {
+          filter: $blackFilter;
+        }
+        &:hover {
+          color: $hover;
+          border: 1px solid $hover;
+
+          img {
+            filter: $hoverFilter;
+          }
+        }
+      }
+    }
+
+    &.active {
+      background-color: $red;
+      color: $white;
+      img {
+        filter: $whiteFilter;
+      }
+    }
+    &:focus:not(:active) {
+      outline: 3px solid $focus;
+    }
+    // &:active {
+    //   outline: 3px solid $black;
+    // }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $gray80;
+    color: $gray50;
+    img {
+      filter: $gray50Filter;
+    }
+  }
+}

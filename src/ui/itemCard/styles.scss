@@ -1,0 +1,54 @@
+@import "../../styles/global";
+
+.cardWrapper {
+  cursor: pointer;
+  background-color: $white;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 5px 0px rgba(6, 31, 106, 0.05);
+  .topWrapper {
+    position: relative;
+    .itemDelete {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      cursor: pointer;
+      padding: 8px;
+      &:hover {
+        background-color: $bg;
+        border-radius: 12px;
+      }
+    }
+    .itemName {
+    }
+    .itemBrand {
+    }
+    .itemRating {
+      margin-top: 8px;
+    }
+  }
+
+  .bottomWrapper {
+    display: flex;
+    .bottomItem {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .bottomBr {
+      margin: 0 16px;
+      width: 1px;
+      background-color: $gray80;
+    }
+  }
+
+  &:hover {
+    outline: 1px solid $hover;
+  }
+}
