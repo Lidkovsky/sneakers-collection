@@ -1,6 +1,6 @@
 import "./styles.scss";
 import trashIcon from "../../images/trash-icon.svg";
-import { SneakerAPIInterfase } from "../../components/sneakersList/SneakersList";
+import { SneakerAPIInterfase } from "../../pages/main/Main";
 import RatingStars from "../ratingStars/RatingStars";
 
 interface Props {
@@ -11,9 +11,6 @@ interface Props {
 }
 
 function ItemCard({ shoe, onDelete, onTap, className }: Props) {
-  const handleClick = (e: any) => {
-    // e.target.contains();
-  };
   return (
     <div className={"cardWrapper " + className} onClick={onTap}>
       <div className="topWrapper">

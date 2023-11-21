@@ -7,10 +7,11 @@ import sizeIcon from "../../images/size-icon.svg";
 
 interface Props {
   setFilter: React.Dispatch<React.SetStateAction<string | undefined>>;
-  filter: string | undefined;
+
+  className?: string;
 }
 
-function SortBar({ setFilter, filter = undefined }: Props) {
+function SortBar({ className, setFilter }: Props) {
   const filtersArr = [
     { title: "Oldest year", name: "year", icon: calendarIcon },
     { title: "Smallest size", name: "size", icon: dollarIcon },
@@ -24,20 +25,9 @@ function SortBar({ setFilter, filter = undefined }: Props) {
     else setFilter(undefined);
   }, [selectedOption]);
 
-  const handleOptionClick = (option: any) => {
-    if (selectedOption === option) {
-      setSelectedOption(undefined);
-    }
-    setSelectedOption(option);
-    setIsOpen(false);
-
-    if (setFilter) {
-      setFilter(option);
-    }
-  };
   return (
     <>
-      <div className="sortBarMob">
+      <div className={"sortBarMob " + className}>
         <Button
           className="dropdownButton"
           type="secondary"
@@ -65,7 +55,7 @@ function SortBar({ setFilter, filter = undefined }: Props) {
           ))}
         </div>
       </div>
-      <div className="sortbarWrapper">
+      <div className={"sortbarWrapper " + className}>
         <label>Sort by:</label>
         {filtersArr.map((item, index) => {
           return (

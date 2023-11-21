@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import starFilled from "../../images/star-filled.svg";
 import starEmpty from "../../images/star-empty.svg";
-import { SneakerInterfase } from "../../components/sneakersList/SneakersList";
 
 interface Props {
   editable?: boolean;
