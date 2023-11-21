@@ -1,0 +1,18 @@
+@import "../../styles/global";
+
+.searchBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  img {
+    position: absolute;
+    left: 16px;
+    pointer-events: none;
+    filter: $gray80Filter;
+  }
+  input {
+    height: 100%;
+    padding-left: 48px;
+  }
+}

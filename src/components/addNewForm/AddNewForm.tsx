@@ -1,5 +1,5 @@
 import React, { ChangeEvent, RefObject, useEffect, useState } from "react";
-import TextField from "../../ui/textField/TextField";
+import TextField from "../textField/TextField";
 import "./styles.scss";
 import Button from "../../ui/button/Button";
 import plusIcon from "../../images/plus-icon.svg";

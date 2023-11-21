@@ -4,7 +4,7 @@ import "./styles.scss";
 interface Props {
   className?: string;
   text: string;
-  iconUrl?: any;
+  iconUrl?: string;
   icon?: "left" | "right";
   type?: "primary" | "secondary";
   size?: "large" | "small";

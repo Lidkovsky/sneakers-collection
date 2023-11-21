@@ -40,5 +40,11 @@
     position: absolute;
     top: 72px;
     right: 24px;
+    padding: 8px;
+    box-sizing: content-box;
+    &:hover {
+      border-radius: 12px;
+      background-color: $bg;
+    }
   }
 }

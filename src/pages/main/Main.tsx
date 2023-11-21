@@ -4,9 +4,10 @@ import "./styles.scss";
 import Button from "../../ui/button/Button";
 import AddNewForm from "../../components/addNewForm/AddNewForm";
 import SneakersList from "../../components/sneakersList/SneakersList";
-import TextField from "../../ui/textField/TextField";
+import TextField from "../../components/textField/TextField";
 import plusIcon from "../../images/plus-icon.svg";
 import SideMenu from "../../components/sideMenu/SideMenu";
+import SearchBar from "../../ui/serachBar/SearchBar";
 
 function Main() {
   const [isSideOpen, setIsSideOpen] = useState<boolean>(false);
@@ -29,12 +30,12 @@ function Main() {
       <header className="globalWrapper grid headerWrapper">
         <h1>Your Collection</h1>
         <div className="searchWrapper">
-          <TextField
+          <SearchBar
             className="searchBar"
-            placeholder="Search"
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
+            onChange={(e: any) => setSearchQuery(e.target.value.toLowerCase())}
           />
+
           <Button
             className="addNewButton"
             text="Add new sneakers"

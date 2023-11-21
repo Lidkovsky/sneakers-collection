@@ -1,13 +1,8 @@
-import React, {
-  ChangeEvent,
-  FormEvent,
-  ReactComponentElement,
-  useState,
-} from "react";
+import { ChangeEvent, useState } from "react";
 import "./styles.scss";
-
+import TextInput from "../../ui/textInput/TextInput";
 interface Props {
-  label?: string;
+  label: string;
   placeholder?: string;
   name?: string;
   type?: "text" | "email" | "password" | "number";
@@ -40,34 +35,25 @@ function TextField({
     }
   };
 
-  return label ? (
+  return (
     <label className={"label " + className}>
       {label}
-      <input
-        className={"textFieldInput " + (error ? "invalid" : "")}
+      <TextInput
+        className={error ? " invalid" : ""}
         type={type}
         name={name}
         placeholder={placeholder}
         value={value}
-        onChange={onChange}
+        onChange={(e) => {
+          setError(false);
+          onChange(e);
+        }}
         disabled={disabled}
         required={required}
         onInvalid={handleInvalid}
       />
       <p className="errorMessage">{error}</p>
     </label>
-  ) : (
-    <input
-      className={"textFieldInput " + className}
-      type={type}
-      name={name}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-      disabled={disabled}
-      required={required}
-      onInvalid={handleInvalid}
-    />
   );
 }
 

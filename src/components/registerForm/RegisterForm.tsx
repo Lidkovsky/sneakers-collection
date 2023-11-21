@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
-import TextField from "../../ui/textField/TextField";
+import TextField from "../textField/TextField";
 import Button from "../../ui/button/Button";
 
 import "./styles.scss";
