@@ -8,9 +8,10 @@
   padding-top: 56px;
   min-height: 100vh;
   @include lg {
-    padding: 20px 0;
+    padding: 20px 22px;
   }
   .createContent {
+    width: 100%;
     img {
       grid-column: 2 / 4;
       height: 180px;
